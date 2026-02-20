@@ -12,7 +12,7 @@ class AppTheme {
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: "Poppins",
+    fontFamily: "Inter",
     brightness: Brightness.light,
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.white,
@@ -25,7 +25,7 @@ class AppTheme {
   );
   static ThemeData dartTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: "Poppins",
+    fontFamily: "Inter",
     brightness: Brightness.dark,
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.black,
