@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DeviceUtility {
+  DeviceUtility._();
+
   static double getScreenHeight() {
     return Get.height;
   }

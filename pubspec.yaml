@@ -36,12 +36,15 @@ dependencies:
   get: ^4.7.3
   http: ^1.6.0
   toastification: ^3.0.3
-  flutter_native_splash: ^2.4.7
   connectivity_plus: ^7.0.0
   smooth_page_indicator: ^2.0.1
   carousel_slider: ^5.1.2
   shared_preferences: ^2.5.4
   intl: ^0.20.2
+  firebase_core: ^4.4.0
+  firebase_auth: ^6.1.4
+  cloud_firestore: ^6.1.2
+  firebase_messaging: ^16.1.1
 
 dev_dependencies:
   flutter_test:

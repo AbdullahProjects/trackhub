@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "766996217128",
+    "project_id": "trackhub-6e96e",
+    "storage_bucket": "trackhub-6e96e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766996217128:android:1fcfb68b5b0f8e9fa8a41d",
+        "android_client_info": {
+          "package_name": "com.example.trackhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeakSHZ1woinEDddt_6ziNSMgTdbmctX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
