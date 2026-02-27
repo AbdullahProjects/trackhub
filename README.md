@@ -5,7 +5,9 @@
 ![Firebase](https://img.shields.io/badge/Firebase-Backend-orange)
 ![Platform](https://img.shields.io/badge/Platform-Android-green)|
 
-![TrackHub Demo](https://github.com/AbdullahProjects/trackhub/blob/main/assets/images/logo/complete_app_logo.png)
+<p align="center">
+  <img src="https://github.com/AbdullahProjects/trackhub/blob/main/assets/images/logo/complete_app_logo.png" width="250" alt="App Logo"/>
+</p>
 
 TrackHub is a **real-time bus tracking and transport management system** designed for schools, universities, and organizations.  
 It enables live bus tracking, driver management, route control, and instant notifications — all from a centralized digital platform.
