@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Android-green)|
 
 <p align="center">
-  <img src="https://github.com/AbdullahProjects/trackhub/blob/main/assets/images/logo/complete_app_logo.png" width="250" alt="App Logo"/>
+  <img src="https://github.com/AbdullahProjects/trackhub/blob/main/assets/images/logo/complete_app_logo.png" width="200" alt="App Logo"/>
 </p>
 
 TrackHub is a **real-time bus tracking and transport management system** designed for schools, colleges and universities students, and for employees who use their organization transportaion.
