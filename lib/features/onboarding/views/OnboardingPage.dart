@@ -164,7 +164,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           Get.offAll(() => const LoginScreen());
                           return;
                         }
-
                         _carouselController.nextPage();
                       },
                       child: const Text("Next"),
