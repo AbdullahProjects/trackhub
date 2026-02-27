@@ -80,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                       'Forgot password?',
                       style: Theme.of(
                         context,
-                      ).textTheme.bodySmall!.apply(color: AppColors.primary),
+                      ).textTheme.bodyMedium!.apply(color: AppColors.primary),
                     ),
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trackhub/features/auth/views/login/LoginScreen.dart';
+import 'package:trackhub/features/onboarding/views/OnboardingPage.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_images.dart';
 import 'package:trackhub/utils/device/device_utility.dart';
@@ -23,7 +24,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _navigateToLogin() async {
     await Future.delayed(const Duration(seconds: 2));
-    Get.offAll(LoginScreen());
+    // Get.offAll(LoginScreen());
+    Get.offAll(OnboardingPage());
   }
   
   @override
