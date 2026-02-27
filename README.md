@@ -9,57 +9,59 @@
   <img src="https://github.com/AbdullahProjects/trackhub/blob/main/assets/images/logo/complete_app_logo.png" width="250" alt="App Logo"/>
 </p>
 
-TrackHub is a **real-time bus tracking and transport management system** designed for schools, universities, and organizations.  
-It enables live bus tracking, driver management, route control, and instant notifications — all from a centralized digital platform.
+TrackHub is a **real-time bus tracking and transport management system** designed for schools, colleges and universities students, and for employees who use their organization transportaion.
 
 ---
 
-## 📸 Project Demo (Working Preview)
+## Project Demo (Working Preview)
 
 TrackHub is currently in the development phase.
-Core architecture, Firebase integration, and authentication modules are fully implemented. The MVP (Minimum Viable Product) is expected to be completed within the next 2 months.
+Core architecture, Firebase integration, and authentication modules are fully implemented. The MVP (Minimum Viable Product) is expected to be completed within the next 2 months (till May 2026).
 
 ![TrackHub Demo](https://github.com/AbdullahProjects/trackhub/blob/main/demo/TrackHub%20Splash%20Screen.png)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 TrackHub transform traditional transport into digital system by:
 
 - Providing real-time GPS tracking updates to passengers with estimated arrival time (ETA)
-- Real-time communication between drivers and passengers
-- Providing instant notifications from admin to all passengers about bus delays, route changes or any alert through Admin Panel specially designed for transport Admins (also in development phase)
+- Providing detailed route overview with assigned stops and route directions to drivers and passengers
+- Allowing real-time communication between drivers and passengers
+- Providing instant notifications from admin side to all passengers about bus delays, route changes or any alert through Admin Panel specially designed for transport Admins (also in development phase)
 - Enabling admin-level transport management through **Admin Panel**
 
 This project is currently under active development.
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
-### Driver App
+TrackHub platform support 3 types of roles: Drivers and Passengers operated through mobile application and Admin through admin panel developed in Reactjs.
+
+### 1. Driver App
 - Live location sharing
 - Detailed route overview with assigned stops and route directions
 - Start / Stop trip functionality
 - Real-time status updates
 
-### Admin Panel (in development phase)
+### 2. Student / Passenger App
+- View live bus location
+- Estimated arrival time (ETA)
+- Receive delay notifications
+- View driver & bus details
+
+### 3. Admin Panel (in development phase)
 - Live bus tracking dashboard
 - Driver & bus management
 - Route creation and assignment
 - Notification broadcasting
 - Fleet monitoring
 
-### Student / Passenger App
-- View live bus location
-- Estimated arrival time (ETA)
-- Receive delay notifications
-- View driver & bus details
-
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 **Mobile App:** Flutter, Dart  
 **Backend:** Firebase (Auth, Firestore, Realtime Database, Cloud Messaging)  
@@ -67,3 +69,11 @@ This project is currently under active development.
 **Maps Integration:** Google Maps SDK + Directions API  
 
 ---
+
+## Contact
+
+If you're a recruiter or collaborator and would like to know more about the project, feel free to connect.
+
+---
+
+⭐ If you find this project interesting, consider giving it a star!
