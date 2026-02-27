@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trackhub/common/widgets/header/AuthScreenHeader.dart';
 import 'package:trackhub/features/auth/views/create_account/CreateAccountScreen.dart';
+import 'package:trackhub/features/auth/views/forgot_password/ForgotPasswordScreen.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
 
@@ -61,7 +62,26 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: AppSizes.spaceBtwSections),
+                const SizedBox(height: AppSizes.spaceBtwItems),
+
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () => Get.to(() => const ForgotPasswordScreen()),
+                    style: TextButton.styleFrom(
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      foregroundColor: AppColors.primary,
+                    ),
+                    child: Text(
+                      'Forgot password?',
+                      style: Theme.of(
+                        context,
+                      ).textTheme.bodySmall!.apply(color: AppColors.primary),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: AppSizes.spaceBtwItems),
 
                 SizedBox(
                   width: double.infinity,

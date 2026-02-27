@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trackhub/common/widgets/header/AuthScreenHeader.dart';
+import 'package:trackhub/features/auth/views/email_verification/VerifyEmailAddressScreen.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
 
@@ -106,7 +107,7 @@ class CreateAccountScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => VerifyEmailAddressScreen()),
                     child: const Text('Create account'),
                   ),
                 ),
@@ -119,10 +120,9 @@ class CreateAccountScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Already have an account? ',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodySmall!
-                            .apply(color: AppColors.textDark),
+                        style: Theme.of(
+                          context,
+                        ).textTheme.bodySmall!.apply(color: AppColors.textDark),
                       ),
                       TextButton(
                         onPressed: () => Get.back(),
