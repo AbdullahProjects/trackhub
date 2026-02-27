@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:trackhub/common/widgets/header/AuthScreenHeader.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
+import 'package:trackhub/utils/device/device_utility.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = DeviceUtility.isDarkMode(context);
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -28,9 +31,9 @@ class ForgotPasswordScreen extends StatelessWidget {
                 const SizedBox(height: AppSizes.spaceBtwItems / 2),
                 Text(
                   "Enter your registered email address to reset your password.",
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                    color: isDark ? AppColors.textLight : AppColors.textDark,
+                  ),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwSections),
 

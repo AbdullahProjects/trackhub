@@ -11,6 +11,8 @@ class AuthScreenHeader extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final canPop = Navigator.of(context).canPop();
+
     return AppBar(
       automaticallyImplyLeading: false,
       elevation: 0,
@@ -18,14 +20,16 @@ class AuthScreenHeader extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
-      leading: IconButton(
-        onPressed: () => Get.back(),
-        icon: const FaIcon(
-          FontAwesomeIcons.chevronLeft,
-          size: AppSizes.iconSm,
-          color: AppColors.primary,
-        ),
-      ),
+      leading: canPop
+          ? IconButton(
+              onPressed: () => Get.back(),
+              icon: const FaIcon(
+                FontAwesomeIcons.chevronLeft,
+                size: AppSizes.iconSm,
+                color: AppColors.primary,
+              ),
+            )
+          : null,
       title: Image.asset(
         AppImages.headerAppLogo,
         width: DeviceUtility.getScreenWidth() * 0.28,

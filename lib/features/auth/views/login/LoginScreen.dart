@@ -5,12 +5,15 @@ import 'package:trackhub/features/auth/views/create_account/CreateAccountScreen.
 import 'package:trackhub/features/auth/views/forgot_password/ForgotPasswordScreen.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
+import 'package:trackhub/utils/device/device_utility.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = DeviceUtility.isDarkMode(context);
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -31,9 +34,9 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: AppSizes.spaceBtwItems / 2),
                 Text(
                   "Welcome back to the app",
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                    color: isDark ? AppColors.textLight : AppColors.textDark,
+                  ),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwSections),
 
@@ -100,9 +103,11 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Create an account? ',
-                        style: Theme.of(
-                          context,
-                        ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                        style: Theme.of(context).textTheme.bodySmall!.apply(
+                          color: isDark
+                              ? AppColors.textLight
+                              : AppColors.textDark,
+                        ),
                       ),
                       TextButton(
                         onPressed: () =>

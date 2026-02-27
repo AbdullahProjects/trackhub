@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:trackhub/common/widgets/header/AuthScreenHeader.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
+import 'package:trackhub/utils/device/device_utility.dart';
 
 class VerifyEmailAddressScreen extends StatelessWidget {
   const VerifyEmailAddressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = DeviceUtility.isDarkMode(context);
+
     return Scaffold(
       appBar: const AuthScreenHeader(),
       body: SingleChildScrollView(
@@ -26,27 +29,27 @@ class VerifyEmailAddressScreen extends StatelessWidget {
               const SizedBox(height: AppSizes.spaceBtwItems / 2),
               Text(
                 "We’ve sent a verification link to your registered email.",
-                style: Theme.of(
-                  context,
-                ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                style: Theme.of(context).textTheme.bodySmall!.apply(
+                  color: isDark ? AppColors.textLight : AppColors.textDark,
+                ),
               ),
               const SizedBox(height: AppSizes.spaceBtwItems / 2),
               Text(
                 "Please check your inbox and click the link to continue.",
-                style: Theme.of(
-                  context,
-                ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                style: Theme.of(context).textTheme.bodySmall!.apply(
+                  color: isDark ? AppColors.textLight : AppColors.textDark,
+                ),
               ),
-              const SizedBox(height: AppSizes.spaceBtwSections),
+              const SizedBox(height: AppSizes.spaceBtwItems),
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
                 alignment: WrapAlignment.start,
                 children: [
                   Text(
                     "Didn’t receive the email? ",
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                    style: Theme.of(context).textTheme.bodySmall!.apply(
+                      color: isDark ? AppColors.textLight : AppColors.textDark,
+                    ),
                   ),
                   TextButton(
                     onPressed: () {},
@@ -57,9 +60,9 @@ class VerifyEmailAddressScreen extends StatelessWidget {
                     ),
                     child: Text(
                       "Resend Link",
-                      style: Theme.of(context).textTheme.bodySmall!.apply(
-                            color: AppColors.primary,
-                          ),
+                      style: Theme.of(
+                        context,
+                      ).textTheme.bodySmall!.apply(color: AppColors.primary),
                     ),
                   ),
                 ],
@@ -72,7 +75,7 @@ class VerifyEmailAddressScreen extends StatelessWidget {
                   child: const Text('Verify'),
                 ),
               ),
-              const SizedBox(height: AppSizes.spaceBtwSections),
+              const SizedBox(height: AppSizes.spaceBtwItems),
               Center(
                 child: TextButton(
                   onPressed: () {},
@@ -83,9 +86,9 @@ class VerifyEmailAddressScreen extends StatelessWidget {
                   ),
                   child: Text(
                     "Resend OTP in 23s",
-                    style: Theme.of(context).textTheme.bodySmall!.apply(
-                          color: AppColors.primary,
-                        ),
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyMedium!.apply(color: AppColors.primary),
                   ),
                 ),
               ),

@@ -4,12 +4,15 @@ import 'package:trackhub/common/widgets/header/AuthScreenHeader.dart';
 import 'package:trackhub/features/auth/views/email_verification/VerifyEmailAddressScreen.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
+import 'package:trackhub/utils/device/device_utility.dart';
 
 class CreateAccountScreen extends StatelessWidget {
   const CreateAccountScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = DeviceUtility.isDarkMode(context);
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -30,9 +33,9 @@ class CreateAccountScreen extends StatelessWidget {
                 const SizedBox(height: AppSizes.spaceBtwItems / 2),
                 Text(
                   "Create your account to get started",
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                    color: isDark ? AppColors.textLight : AppColors.textDark,
+                  ),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwSections),
 
@@ -120,19 +123,25 @@ class CreateAccountScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Already have an account? ',
-                        style: Theme.of(
-                          context,
-                        ).textTheme.bodySmall!.apply(color: AppColors.textDark),
+                        style: Theme.of(context).textTheme.bodySmall!.apply(
+                          color: isDark
+                              ? AppColors.textLight
+                              : AppColors.textDark,
+                        ),
                       ),
                       TextButton(
                         onPressed: () => Get.back(),
                         style: TextButton.styleFrom(
-                          padding: EdgeInsets.zero,
                           minimumSize: Size.zero,
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           foregroundColor: AppColors.primary,
                         ),
-                        child: const Text('Sign In'),
+                        child: Text(
+                          'Sign In',
+                          style: Theme.of(context).textTheme.bodyLarge!.apply(
+                            color: AppColors.primary,
+                          ),
+                        ),
                       ),
                     ],
                   ),
