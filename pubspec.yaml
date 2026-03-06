@@ -40,6 +40,8 @@ flutter:
     - assets/fonts/
     - assets/images/illustrations/
     - assets/images/logo/
+    - assets/images/icon_images/
+    - assets/images/dummy_images/
 
   fonts:
     - family: Inter
