@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:trackhub/common/widgets/header/AuthScreenHeader.dart';
 import 'package:trackhub/features/auth/views/create_account/CreateAccountScreen.dart';
 import 'package:trackhub/features/auth/views/forgot_password/ForgotPasswordScreen.dart';
+import 'package:trackhub/models/user_role.dart';
+import 'package:trackhub/navigation_menu.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_sizes.dart';
 import 'package:trackhub/utils/device/device_utility.dart';
@@ -89,7 +91,9 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.offAll(
+                      () => NavigationMenu(role: UserRole.student),
+                    ),
                     child: const Text('Login'),
                   ),
                 ),
