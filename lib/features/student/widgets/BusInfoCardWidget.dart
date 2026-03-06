@@ -99,7 +99,7 @@ class BusInfoCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: AppSizes.md),
+          const SizedBox(height: AppSizes.sm),
 
           // Middle: Status button + Bus details
           Row(
@@ -155,7 +155,7 @@ class BusInfoCard extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: AppSizes.sm),
+          const SizedBox(height: AppSizes.md),
 
           // Bottom: View Bus Information link
           if (showBusDetailViewText)

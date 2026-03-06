@@ -3,6 +3,10 @@ import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:trackhub/common/widgets/header/ScreenHeader.dart';
 import 'package:trackhub/features/auth/views/login/LoginScreen.dart';
+import 'package:trackhub/features/profile/views/legal/PrivacyPolicyScreen.dart';
+import 'package:trackhub/features/profile/views/legal/TermsConditionsScreen.dart';
+import 'package:trackhub/features/profile/views/support/RateAppScreen.dart';
+import 'package:trackhub/features/profile/views/support/SupportAndFAQScreen.dart';
 import 'package:trackhub/features/profile/widgets/ProfileTileWidget.dart';
 import 'package:trackhub/utils/constants/app_colors.dart';
 import 'package:trackhub/utils/constants/app_images.dart';
@@ -89,13 +93,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileTile(
                   iconImage: AppImages.policyIcon,
                   title: 'Privacy & Policy',
-                  onTap: () {},
+                  onTap: () => Get.to(() => PrivacyPolicyScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
                   iconImage: AppImages.documentIcon,
                   title: 'Terms & Conditions',
-                  onTap: () {},
+                  onTap: () => Get.to(() => TermsConditionsScreen()),
                 ),
               ],
             ),
@@ -107,13 +111,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileTile(
                   iconImage: AppImages.userSpeakIcon,
                   title: 'Support & FAQs',
-                  onTap: () {},
+                  onTap: () => Get.to(() => SupportAndFAQScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
                   iconImage: AppImages.rateIcon,
                   title: 'Rate App',
-                  onTap: () {},
+                  onTap: () => Get.to(() => RateAppScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
