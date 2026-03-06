@@ -33,7 +33,7 @@ class ProfileTile extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: AppSizes.md,
-          vertical: AppSizes.spaceBtwItems,
+          vertical: AppSizes.spaceBtwItems * 1.3,
         ),
         decoration: BoxDecoration(
           color: Colors.white,
