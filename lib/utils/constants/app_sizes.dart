@@ -1,4 +1,6 @@
 class AppSizes {
+  AppSizes._();
+
   // Padding and margin sizes
   static const double xs = 4.0;
   static const double sm = 8.0;
@@ -39,7 +41,7 @@ class AppSizes {
   static const double dividerHeight = 1.0;
 
   // Input field
-  static const double inputFieldRadius = 12.0;
+  static const double inputFieldRadius = 10.0;
   static const double spaceBtwInputFields = 15.0;
 
   // Card sizes

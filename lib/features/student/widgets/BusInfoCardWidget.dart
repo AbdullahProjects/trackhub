@@ -164,17 +164,17 @@ class BusInfoCard extends StatelessWidget {
               child: GestureDetector(
                 onTap: onViewBusInfo,
                 child: Row(
-                  spacing: 3,
+                  spacing: 2,
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(AppImages.busDetailIcon, width: 15),
+                    Image.asset(AppImages.busDetailIcon, width: 13),
                     const SizedBox(width: AppSizes.xs),
                     Text(
                       'View Bus Information',
                       style: Theme.of(
                         context,
-                      ).textTheme.bodyLarge?.copyWith(color: AppColors.orange),
+                      ).textTheme.labelLarge?.copyWith(color: AppColors.orange),
                     ),
                   ],
                 ),
