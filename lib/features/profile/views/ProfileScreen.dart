@@ -5,6 +5,10 @@ import 'package:trackhub/common/widgets/header/ScreenHeader.dart';
 import 'package:trackhub/features/auth/views/login/LoginScreen.dart';
 import 'package:trackhub/features/profile/views/legal/PrivacyPolicyScreen.dart';
 import 'package:trackhub/features/profile/views/legal/TermsConditionsScreen.dart';
+import 'package:trackhub/features/profile/views/profile_settings/ChangeNameScreen.dart';
+import 'package:trackhub/features/profile/views/profile_settings/ChangeOrganizationCodeScreen.dart';
+import 'package:trackhub/features/profile/views/profile_settings/ChangePasswordScreen.dart';
+import 'package:trackhub/features/profile/views/profile_settings/ContactAdminScreen.dart';
 import 'package:trackhub/features/profile/views/support/RateAppScreen.dart';
 import 'package:trackhub/features/profile/views/support/SupportAndFAQScreen.dart';
 import 'package:trackhub/features/profile/widgets/ProfileTileWidget.dart';
@@ -41,25 +45,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileTile(
                   iconImage: AppImages.userIcon,
                   title: 'Change Full name',
-                  onTap: () {},
+                  onTap: () => Get.to(() => ChangeNameScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
                   iconImage: AppImages.lockIcon,
                   title: 'Change password',
-                  onTap: () {},
+                  onTap: () => Get.to(() => ChangePasswordScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
                   iconImage: AppImages.organizationIcon,
                   title: 'Change Organization Code',
-                  onTap: () {},
+                  onTap: () => Get.to(() => ChangeOrganizationCodeScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
                   iconImage: AppImages.busIcon,
                   title: 'Contact Admin',
-                  onTap: () {},
+                  onTap: () => Get.to(() => ContactAdminScreen()),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwItems),
                 ProfileTile(
