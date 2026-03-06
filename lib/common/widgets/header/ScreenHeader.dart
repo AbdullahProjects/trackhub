@@ -7,7 +7,16 @@ import 'package:trackhub/utils/device/device_utility.dart';
 
 class ScreenHeader extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  const ScreenHeader({super.key, required this.title});
+  final Widget? trailing;
+  final Color? backgroundColor;
+  final Color? textColor;
+  const ScreenHeader({
+    super.key,
+    required this.title,
+    this.trailing,
+    this.backgroundColor,
+    this.textColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +36,15 @@ class ScreenHeader extends StatelessWidget implements PreferredSizeWidget {
             ),
       title: Text(
         title,
-        style: Theme.of(
-          context,
-        ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600),
+        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+          fontWeight: FontWeight.w600,
+          color: textColor ?? AppColors.black,
+        ),
       ),
+      actions: [?trailing],
       centerTitle: true,
       automaticallyImplyLeading: false,
-      backgroundColor: Colors.transparent,
+      backgroundColor: backgroundColor ?? Colors.transparent,
       elevation: 0,
       scrolledUnderElevation: 0,
     );

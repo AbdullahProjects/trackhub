@@ -21,15 +21,15 @@ class NavigationMenu extends StatelessWidget {
     return [
       NavItemData(
         label: 'Home',
-        icon: Iconsax.home,
-        activeIcon: Iconsax.home_2,
+        icon: Iconsax.home_1_copy,
+        activeIcon: Iconsax.home_1,
         screen: isStudent
             ? const StudentHomeScreen()
             : const DriverHomeScreen(),
       ),
       NavItemData(
         label: 'Search',
-        icon: Iconsax.search_normal_1,
+        icon: Iconsax.search_normal_1_copy,
         activeIcon: Iconsax.search_normal_1,
         screen: isStudent
             ? const StudentSearchScreen()
@@ -37,13 +37,13 @@ class NavigationMenu extends StatelessWidget {
       ),
       NavItemData(
         label: 'Notification',
-        icon: Iconsax.notification,
+        icon: Iconsax.notification_copy,
         activeIcon: Iconsax.notification,
         screen: const NotificationScreen(),
       ),
       NavItemData(
         label: 'Profile',
-        icon: Iconsax.user,
+        icon: Iconsax.user_copy,
         activeIcon: Iconsax.user,
         screen: const ProfileScreen(),
       ),
@@ -143,9 +143,9 @@ class _NavItem extends StatelessWidget {
             Text(
               label,
               style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                    color: color,
-                    fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
-                  ),
+                color: color,
+                fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+              ),
             ),
           ],
         ),
